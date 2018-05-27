@@ -10,3 +10,5 @@ Backend/Backend/bin/
 Backend/Backend/obj/
 ClientApp/obj/
 ClientApp/Properties/launchSettings.json
+Backend/BackEnd.Test/bin/
+Backend/BackEnd.Test/obj/
