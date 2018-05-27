@@ -13,6 +13,7 @@ namespace Backend.Repositories
     public class CandidateRepository: ICandidateRepository
     {
         private readonly AppSettings _appSettings;
+        private IEnumerable<CandidateModel> _candidateCache;
 
         public CandidateRepository(IOptions<AppSettings> appSettings)
         {
@@ -21,16 +22,19 @@ namespace Backend.Repositories
 
         public async Task<IEnumerable<CandidateModel>> GetCandidates()
         {
+            if (_candidateCache != null) return _candidateCache;
+
             using (var client = new HttpClient())
             {
                 var response = await client.GetAsync(new Uri(_appSettings.CandidateUrl));
                 using (var content = response.Content)
                 {
                     var json = await content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<IEnumerable<CandidateModel>>(json);
+                    _candidateCache = JsonConvert.DeserializeObject<IEnumerable<CandidateModel>>(json);
                 }
-                
             }
+
+            return _candidateCache;
         }
     }
 }

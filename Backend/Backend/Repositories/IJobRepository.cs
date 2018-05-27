@@ -8,6 +8,7 @@ namespace Backend.Repositories
 {
     public interface IJobRepository
     {
+        Task<JobModel> GetJobById(int jobId);
         Task<IEnumerable<JobModel>> GetJobs();
     }
 }
