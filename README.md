@@ -4,12 +4,12 @@ Job Matcher app
 #Tech stack: .NET Core 2, xUnit, Moq, VueJS 2, SSR, Typescript, Webpack, SASS, Bulma
 
 #Current bug / improvement needed:
-	+ Job Detail page throws 500 when refresh (need to debug the code in Node server)
-	+ Use NProgress for better UX
-	+ Highlight matched skills for each candidate
-	+ Job detail page needs to show more information of the current job
-	+ Lazy-loading candidate list (currently load all candidates in one hit)
-	+ Write Jest test
++ Job Detail page throws 500 when refresh (need to debug the code in Node server)
++ Use NProgress for better UX
++ Highlight matched skills for each candidate
++ Job detail page needs to show more information of the current job
++ Lazy-loading candidate list (currently load all candidates in one hit)
++ Write Jest test
 	
 #HOW TO USE:
 + Backend: VS2017 WebAPI project, F5 to run it first
