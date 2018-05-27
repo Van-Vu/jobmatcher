@@ -1,0 +1,20 @@
+﻿//mixins
+@import 'base/colors';
+@import 'base/effect';
+@import 'base/size';
+@import 'mixins/absolutecenter';
+@import 'mixins/breakpoints';
+@import 'mixins/clearfix';
+@import 'mixins/placeholder';
+@import 'mixins/triangles';
+@import 'mixins/common';
+
+
+//Base rules
+@import 'bulma';
+@import 'base/elementatom';
+//Components
+
+@import 'components/app';
+@import 'components/home';
+@import 'components/listingcard';

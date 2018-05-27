@@ -1,0 +1,12 @@
+Backend/.vs/
+ClientApp/node_modules/
+ClientApp/dist/
+ClientApp/npm-debug.log
+ClientApp/yarn-error.log
+ClientApp/test/unit/coverage
+ClientApp/test/e2e/reports
+ClientApp/coverage/
+Backend/Backend/bin/
+Backend/Backend/obj/
+ClientApp/obj/
+ClientApp/Properties/launchSettings.json

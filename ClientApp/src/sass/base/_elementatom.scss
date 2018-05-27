@@ -1,0 +1,28 @@
+﻿.absolute-center {
+    @include absolutecenter;
+}
+
+.absolute-center-y {
+    @include absolutecenter("y");
+}
+
+.absolute-center-x {
+    @include absolutecenter("x");
+}
+
+.relative-center-y {
+    @include absolutecenter("y","relative");
+}
+
+.relative-center-x {
+    @include absolutecenter("x","relative");
+}
+
+.checkbox {
+    margin-top: 6px;
+    margin-right: 6px;
+}
+
+a {
+    cursor: pointer;
+}

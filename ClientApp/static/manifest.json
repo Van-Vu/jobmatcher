@@ -1,0 +1,17 @@
+{
+  "name": "Fun With Local",
+  "short_name": "Fun With Local",
+  "icons": [
+    {
+      "src": "/static/images/pwa.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#99CD4E",
+  "lang": "en-US"
+}
