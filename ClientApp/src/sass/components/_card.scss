@@ -1,0 +1,71 @@
+﻿.card-full {
+    width: 100%;
+    overflow: auto;
+    display: inline-block;
+    background-color: $c-lightgrey-lightest;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    @media all and (min-width: $is-tablet) {
+        width: 31%;
+        margin: 10px 1%;
+    }
+
+    &:hover {
+        -webkit-transform: scale(1.015);
+        transform: scale(1.015);
+        box-shadow: 0 10px 50px -5px rgba(0,0,0,.15);
+        transition: .3s ease-in-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    a {
+        color: $c-darkgrey-darkest;
+    }
+}
+
+.card {
+    &-header {
+        font-size: 22px;
+        padding: 5px 20px 0 15px;
+        border: 0;
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-height: 80px;
+        }
+    }
+
+    &-role {
+        margin: 5px 15px;
+    }
+
+    &-tag {
+        margin: 5px 12px;
+        min-height: 64px;
+
+        div {
+            display: inline-block;
+            background-color: $c-lightgrey-light;
+            margin: 2px 5px;
+            padding: 2px 3px;
+            border-radius: 10px;
+        }
+        
+    }
+
+    &-chart {
+        .radial-progress-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

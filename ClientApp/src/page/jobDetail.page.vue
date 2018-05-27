@@ -1,9 +1,15 @@
 <template>
     <div class="page-content container tile is-vertical article">
         <div class="tile">
-            <router-link :to="{ name: 'HomePage' }"> Back to home page </router-link>
+            <router-link :to="{ name: 'home' }"> Back to home page </router-link>
         </div>
-        <div class="tile is-parent">
+        <div class="container">
+            <h2>Candidates</h2>
+            <ul>
+                <li class="li-horizontal" v-for="candidate in model" :key="candidate.candidateId">
+                    <candidatecard :model="candidate"></candidatecard>
+                </li>
+            </ul>            
         </div>
     </div>
 </template>

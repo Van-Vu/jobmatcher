@@ -18,6 +18,7 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import { ScreenSize } from '../model/enum';
 import { detectScreenSize } from '../service/screen.service';
+import JobCardComponent from '../component/jobcard.component.vue';
 import vMediaQuery from '../component/v-media-query';
 Vue.use(vMediaQuery);
 var HomePage = /** @class */ (function (_super) {
@@ -50,7 +51,9 @@ var HomePage = /** @class */ (function (_super) {
     HomePage = __decorate([
         Component({
             name: 'HomePage',
-            components: {}
+            components: {
+                'jobcard': JobCardComponent
+            }
         })
     ], HomePage);
     return HomePage;

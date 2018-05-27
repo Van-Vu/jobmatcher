@@ -1,7 +1,5 @@
 <template>
     <div id="app">
-        <header class="hero-head">
-        </header>
         <section class="hero-body">
             <transition name="slide-fade">
                 <router-view></router-view>

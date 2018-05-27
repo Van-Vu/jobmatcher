@@ -1,6 +1,6 @@
 {
-  "name": "Fun With Local",
-  "short_name": "Fun With Local",
+  "name": "Job Matcher",
+  "short_name": "Job Matcher",
   "icons": [
     {
       "src": "/static/images/pwa.png",

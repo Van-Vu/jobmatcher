@@ -3,10 +3,16 @@ import Vue from "vue";
 import store from '../store';
 import { Utils } from '../component/utils';
 
+import { GlobalConfig } from '../GlobalConfig';
+
 (Vue.prototype as any).$http = axios;
 
+var backendUrl = process.env.NODE_ENV == 'production'
+    ? GlobalConfig.accessControl.prod
+    : GlobalConfig.accessControl.dev;
+
 export const http = axios.create({
-    baseURL: `http://localhost:12345/`
+    baseURL: backendUrl
 })
 
 http.defaults.withCredentials = true;

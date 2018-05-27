@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Backend.ViewModel
 {
-    public class CandidateViewModel
+    public class JobViewModel
     {
-        public int CandidateId { get; set; }
+        public int JobId { get; set; }
         public string Name { get; set; }
+        public string Company { get; set; }
         public List<string> Skills { get; set; }
-        public int PercentageMatch { get; set; }
     }
 }

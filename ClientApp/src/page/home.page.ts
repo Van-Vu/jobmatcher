@@ -4,12 +4,16 @@ import VueRouter from 'vue-router';
 import { Utils } from '../component/utils';
 import { ScreenSize } from '../model/enum';
 import { detectScreenSize } from '../service/screen.service';
+
+import JobCardComponent from '../component/jobcard.component.vue';
+
 import vMediaQuery from '../component/v-media-query';
 Vue.use(vMediaQuery);
 
 @Component({
     name: 'HomePage',
     components: {
+        'jobcard': JobCardComponent 
     }
 })
 

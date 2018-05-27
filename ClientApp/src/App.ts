@@ -27,20 +27,20 @@ Vue.config.errorHandler = function (err, vm, info) {
     },
     metaInfo: {
         // if no subcomponents specify a metaInfo.title, this title will be used
-        title: 'Fun with Local',
+        title: 'Job Matcher',
         meta: [
             { vmid: 'charset', charset: 'utf-8' },
             { vmid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui' },
             { vmid: 'theme-color', name: 'theme-color', content: '#99CD4E' },
             { vmid: 'mobile-web-app-capable', name: 'mobile-web-app-capable', content: 'yes' },
-            { vmid: 'description', name: 'description', content: 'Desire for unique experiences like a local with no booking fee? Includes travel tips, do and dont, hidden gems, indoor, outdoor activities. Check this out !' },
-            { vmid: 'ogtitle', property: 'og:title', content: 'Fun with Local' },
+            { vmid: 'description', name: 'description', content: 'Test desc' },
+            { vmid: 'ogtitle', property: 'og:title', content: 'Job Matcher' },
             { vmid: 'ogtype', property: 'og:type', content: 'website' },
-            { vmid: 'ogurl', property: 'og:url', content: 'https://funwithlocal.com' },
-            { vmid: 'ogsitename', property: 'og:site_name', content: 'Fun with Local' },
-            { vmid: 'ogdescription', property: 'og:description', content: 'Fun with Local' },
-            { vmid: 'twitterdomain', property: 'twitter:domain', content: 'funwithlocal.com' },
-            { vmid: 'twittersite', property: 'twitter:site', content: '@FunWithLocal' }
+            { vmid: 'ogurl', property: 'og:url', content: 'https://jobmatcher.com' },
+            { vmid: 'ogsitename', property: 'og:site_name', content: 'Job Matcher' },
+            { vmid: 'ogdescription', property: 'og:description', content: 'Job Matcher' },
+            { vmid: 'twitterdomain', property: 'twitter:domain', content: 'jobmatcher.com' },
+            { vmid: 'twittersite', property: 'twitter:site', content: '@JobMatcher' }
         ],
         link: [
             { vmid: 'manifest', rel: 'manifest', href: '/manifest.json' }

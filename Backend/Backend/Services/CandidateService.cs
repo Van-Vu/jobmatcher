@@ -36,12 +36,12 @@ namespace Backend.Services
                 {
                     CandidateId = candidate.CandidateId,
                     Name = candidate.Name,
-                    SkillTags = candidate.SkillTags,
+                    Skills = candidate.SkillTags.Split(", ").ToList(),
                     PercentageMatch = matchSkills.Count() * 100 /  jobSkills.Count()
                 });
             }
 
-            return viewModel;
+            return viewModel.OrderByDescending(x => x.PercentageMatch);
         }
     }
 }

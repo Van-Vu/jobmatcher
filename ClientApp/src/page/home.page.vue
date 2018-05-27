@@ -1,16 +1,11 @@
 ﻿<template>
     <div class="container">
-        <section class="header-main">
-        </section>
-
-        <section class="page-content">
-            <h2>Job List</h2>
-            <!-- <ul>
-                <li class="li-horizontal" v-for="job in jobList">
-                    <jobcard :jobDetail="job"></jobcard>
-                </li>
-            </ul> -->
-        </section>
+        <h2>Job List</h2>
+        <ul>
+            <li class="li-horizontal" v-for="job in jobList" :key="job.JobId">
+                <jobcard :model="job"></jobcard>
+            </li>
+        </ul>
     </div>
 </template>
 

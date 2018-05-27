@@ -16,6 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import CandidateCardComponent from '../component/candidatecard.component.vue';
 var JobDetailPage = /** @class */ (function (_super) {
     __extends(JobDetailPage, _super);
     function JobDetailPage() {
@@ -24,7 +25,7 @@ var JobDetailPage = /** @class */ (function (_super) {
     JobDetailPage.asyncData = function (_a) {
         var store = _a.store, route = _a.route;
         if (route.params.jobId) {
-            return store.dispatch('FETCH_CANDIDATE_BY_JOBID', route.params.jobId);
+            return store.dispatch('FETCH_CANDIDATELIST', route.params.jobId);
         }
     };
     Object.defineProperty(JobDetailPage.prototype, "model", {
@@ -37,7 +38,9 @@ var JobDetailPage = /** @class */ (function (_super) {
     JobDetailPage = __decorate([
         Component({
             name: 'JobDetailPage',
-            components: {},
+            components: {
+                'candidatecard': CandidateCardComponent
+            },
         })
     ], JobDetailPage);
     return JobDetailPage;

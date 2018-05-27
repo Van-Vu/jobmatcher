@@ -2,9 +2,13 @@ import axios from 'axios';
 import Vue from "vue";
 import store from '../store';
 import { Utils } from '../component/utils';
+import { GlobalConfig } from '../GlobalConfig';
 Vue.prototype.$http = axios;
+var backendUrl = process.env.NODE_ENV == 'production'
+    ? GlobalConfig.accessControl.prod
+    : GlobalConfig.accessControl.dev;
 export var http = axios.create({
-    baseURL: "http://localhost:12345/"
+    baseURL: backendUrl
 });
 http.defaults.withCredentials = true;
 if (process.env.NODE_ENV !== 'test') {

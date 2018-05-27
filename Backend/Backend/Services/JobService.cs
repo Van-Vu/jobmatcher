@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Backend.Model;
 using Backend.Repositories;
+using Backend.ViewModel;
 
 namespace Backend.Services
 {
@@ -14,9 +16,15 @@ namespace Backend.Services
             _jobRepository = jobRepository;
         }
 
-        public async Task<IEnumerable<JobModel>> GetAllJobs()
+        public async Task<IEnumerable<JobViewModel>> GetAllJobs()
         {
-            return await _jobRepository.GetJobs();
+            var jobs = await _jobRepository.GetJobs();
+            var jobList = jobs.Select(job => new JobViewModel
+            {
+                JobId = job.JobId, Company = job.Company, Name = job.Name, Skills = job.Skills.Split(", ").ToList()
+            }).ToList();
+
+            return jobList;
         }
     }
 }
