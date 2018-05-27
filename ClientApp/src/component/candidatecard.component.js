@@ -25,6 +25,20 @@ var CandidateCardComponent = /** @class */ (function (_super) {
     function CandidateCardComponent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Object.defineProperty(CandidateCardComponent.prototype, "percentage", {
+        get: function () {
+            return this.model.percentageMatch;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CandidateCardComponent.prototype, "total", {
+        get: function () {
+            return 100;
+        },
+        enumerable: true,
+        configurable: true
+    });
     CandidateCardComponent.prototype.created = function () {
     };
     __decorate([
